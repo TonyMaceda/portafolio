@@ -1,0 +1,23 @@
+<section class="work-approach-section" id="metodologia" aria-labelledby="work-approach-title">
+  <div class="approach-heading">
+    <p class="section-kicker">07 / FORMA DE TRABAJO</p>
+    <h2 id="work-approach-title">Claridad en cada etapa, de principio a mejora continua.</h2>
+    <p>
+      Un proceso colaborativo que conecta el objetivo del negocio con decisiones técnicas y entregas
+      comprobables.
+    </p>
+  </div>
+
+  <ol class="work-steps">
+    @for (step of steps; track step.number) {
+      <li class="work-step">
+        <span class="step-number">{{ step.number }}</span>
+        <div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+          <span class="step-detail">{{ step.technicalDetail }}</span>
+        </div>
+      </li>
+    }
+  </ol>
+</section>

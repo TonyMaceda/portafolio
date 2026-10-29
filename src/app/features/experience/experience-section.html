@@ -1,0 +1,27 @@
+<section class="experience-section" id="experiencia" aria-labelledby="experience-title">
+  <div class="experience-heading">
+    <p class="section-kicker">06 / TRAYECTORIA</p>
+    <h2 id="experience-title">Experiencia construida proyecto a proyecto.</h2>
+    <p>
+      Más de seis años desarrollando y modernizando soluciones empresariales en equipos
+      multidisciplinarios.
+    </p>
+  </div>
+
+  <ol class="experience-list">
+    @for (position of experience; track position.startDate) {
+      <li class="experience-item">
+        <div class="position-period">
+          <time [attr.datetime]="position.startDate">{{ position.startLabel }}</time>
+          <span aria-hidden="true">–</span>
+          <time [attr.datetime]="position.endDate">{{ position.endLabel }}</time>
+        </div>
+        <div class="position-details">
+          <h3>{{ position.role }}</h3>
+          <p class="position-area">{{ position.area }}</p>
+          <p class="position-summary">{{ position.summary }}</p>
+        </div>
+      </li>
+    }
+  </ol>
+</section>

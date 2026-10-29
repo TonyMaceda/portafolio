@@ -1,0 +1,28 @@
+<section class="expertise-section" id="areas-expertise" aria-labelledby="expertise-title">
+  <div class="expertise-heading">
+    <p class="section-kicker">05 / ÁREAS DE EXPERIENCIA</p>
+    <h2 id="expertise-title">Una mirada integral al desarrollo de software.</h2>
+    <p>
+      Combino fundamentos de ingeniería con una visión práctica del producto y de las personas que
+      lo usan.
+    </p>
+  </div>
+
+  <div class="expertise-list">
+    @for (area of areas; track area.number) {
+      <article class="expertise-item">
+        <span class="area-number">{{ area.number }}</span>
+        <div class="area-copy">
+          <h3>{{ area.title }}</h3>
+          <p>{{ area.description }}</p>
+          <ul aria-label="Conocimientos relacionados">
+            @for (keyword of area.keywords; track keyword) {
+              <li>{{ keyword }}</li>
+            }
+          </ul>
+        </div>
+        <span class="area-arrow" aria-hidden="true">↗</span>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,92 @@
+:host {
+  display: block;
+}
+
+.experience-section {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(2.5rem, 8vw, 7rem);
+  padding-block: clamp(4rem, 9vw, 7rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.experience-heading h2 {
+  margin: 0.8rem 0 0;
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  font-weight: 520;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
+}
+
+.section-kicker {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+}
+
+.experience-heading > p:last-child {
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.experience-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+  list-style: none;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding-block: 1.35rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.position-period {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding-top: 0.15rem;
+  color: var(--color-accent);
+  font-family: 'Consolas', monospace;
+  font-size: 0.68rem;
+}
+
+.position-details h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 620;
+}
+
+.position-area {
+  margin: 0.35rem 0 0;
+  color: #c9d6e7;
+  font-size: 0.75rem;
+}
+
+.position-summary {
+  margin: 0.65rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.79rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .experience-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+}
