@@ -1,0 +1,113 @@
+:host {
+  display: block;
+}
+
+.services-section {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  padding-block: clamp(4rem, 9vw, 7rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.services-heading h2 {
+  margin: 0.8rem 0 0;
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  font-weight: 520;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
+}
+
+.section-kicker {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+}
+
+.services-heading > p:last-child {
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: rgb(16 31 50 / 48%);
+}
+
+.service-number {
+  color: var(--color-accent);
+  font-family: 'Consolas', monospace;
+  font-size: 0.65rem;
+}
+
+.service-card h3 {
+  margin: 0.75rem 0 1rem;
+  font-size: 0.98rem;
+  font-weight: 620;
+  line-height: 1.35;
+}
+
+.service-perspective h4 {
+  margin: 0;
+  color: #dce8f6;
+  font-size: 0.69rem;
+  font-weight: 650;
+}
+
+.service-perspective p {
+  margin: 0.35rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  line-height: 1.65;
+}
+
+.technical-perspective {
+  margin-top: 0.8rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid rgb(101 216 255 / 32%);
+}
+
+.service-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: auto 0 0;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+
+.service-card li {
+  padding: 0.28rem 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+  color: var(--color-muted);
+  font-family: 'Consolas', monospace;
+  font-size: 0.58rem;
+}
+
+@media (max-width: 760px) {
+  .services-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

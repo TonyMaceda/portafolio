@@ -1,0 +1,23 @@
+<section class="technology-section" id="tecnologias" aria-labelledby="technology-title">
+  <div class="technology-heading">
+    <p class="section-kicker">02 / TECNOLOGÍAS</p>
+    <h2 id="technology-title">Herramientas elegidas para cada reto.</h2>
+    <p>
+      Experiencia full stack con tecnologías backend, frontend, integración, datos y plataformas
+      empresariales.
+    </p>
+  </div>
+
+  <div class="technology-groups">
+    @for (group of groups; track group.category) {
+      <article class="technology-group">
+        <h3>{{ group.category }}</h3>
+        <ul>
+          @for (technology of group.technologies; track technology) {
+            <li>{{ technology }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>

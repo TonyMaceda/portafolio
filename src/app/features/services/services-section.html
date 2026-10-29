@@ -1,0 +1,32 @@
+<section class="services-section" id="servicios" aria-labelledby="services-title">
+  <div class="services-heading">
+    <p class="section-kicker">04 / CÓMO PUEDO AYUDAR</p>
+    <h2 id="services-title">Soluciones alineadas a las necesidades de tu negocio.</h2>
+    <p>
+      El objetivo es que la tecnología resuelva una necesidad concreta y sea sostenible para quienes
+      la usarán y mantendrán.
+    </p>
+  </div>
+
+  <div class="services-grid">
+    @for (service of services; track service.title; let index = $index) {
+      <article class="service-card">
+        <span class="service-number">0{{ index + 1 }}</span>
+        <h3>{{ service.title }}</h3>
+        <div class="service-perspective">
+          <h4>Beneficio para tu negocio</h4>
+          <p>{{ service.businessDescription }}</p>
+        </div>
+        <div class="service-perspective technical-perspective">
+          <h4>Implementación técnica</h4>
+          <p>{{ service.technicalDescription }}</p>
+        </div>
+        <ul aria-label="Tecnologías relacionadas">
+          @for (technology of service.technologies; track technology) {
+            <li>{{ technology }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>
